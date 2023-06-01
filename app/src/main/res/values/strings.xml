@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">NutriScan</string>
+    <string name="nutriscan">NutriScan</string>
+    <string name="welcome1">Welcome to NutriScan let’s get health with NutriScan because we present to you how to get the best tips diet</string>
+    <string name="welcome2">Welcome to NutriScan let’s get health with NutriScan because we present to you how to get the best tips diet</string>
+    <string name="welcome3">Welcome to NutriScan let’s get health with NutriScan because we present to you how to get the best tips diet</string>
+    <string name="login_account">Login Account</string>
+    <string name="scan_object">Scan object with camera</string>
+
+    <!--Bottom Navigation-->
+    <string name="menu_title_bottom_nav_home">Home</string>
+    <string name="menu_title_bottom_nav_title">Title</string>
+    <string name="menu_title_bottom_nav_notification">Notification</string>
+    <string name="menu_title_bottom_nav_profile">Profile</string>
+
+    <!--Toolbar Navigation-->
+    <string name="toolbar_menu_notification">Information</string>
+    <string name="toolbar_menu_setting">Setting</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="halaman_home">Hello Halaman Home</string>
+    <string name="halaman_title">Hello Halaman Title</string>
+    <string name="halaman_profile">Hello Halaman Profile</string>
+    <string name="halaman_notification">Hello Halaman Notification</string>
+
+</resources>
