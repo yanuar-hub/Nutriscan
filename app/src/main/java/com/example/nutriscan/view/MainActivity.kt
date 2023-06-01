@@ -20,12 +20,12 @@ class MainActivity : AppCompatActivity() {
                     loadFragment(HomeFragment())
                     true
                 }
-                R.id.navigation_title ->{
-                    loadFragment(TitleFragment())
+                R.id.navigation_journal ->{
+                    loadFragment(JournalFragment())
                     true
                 }
-                R.id.navigation_notification ->{
-                    loadFragment(NotificationFragment())
+                R.id.navigation_search ->{
+                    loadFragment(SearchFragment())
                     true
                 }
                 R.id.navigation_profile ->{

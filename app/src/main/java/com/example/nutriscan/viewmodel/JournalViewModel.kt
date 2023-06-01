@@ -2,6 +2,6 @@ package com.example.nutriscan.viewmodel
 
 import androidx.lifecycle.ViewModel
 
-class NotificationViewModel : ViewModel() {
+class JournalViewModel : ViewModel() {
     // TODO: Implement the ViewModel
 }

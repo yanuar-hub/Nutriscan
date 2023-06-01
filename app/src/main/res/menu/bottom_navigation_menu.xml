@@ -8,9 +8,9 @@
         android:title="@string/menu_title_bottom_nav_home"
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/navigation_title"
+        android:id="@+id/navigation_journal"
         android:icon="@drawable/baseline_calendar_today_24"
-        android:title="@string/menu_title_bottom_nav_title"
+        android:title="@string/menu_title_bottom_nav_journal"
         app:showAsAction="ifRoom" />
 
     <item
@@ -20,9 +20,9 @@
         app:showAsAction="ifRoom" />
 
     <item
-        android:id="@+id/navigation_notification"
-        android:icon="@drawable/baseline_notifications_24"
-        android:title="@string/menu_title_bottom_nav_notification"
+        android:id="@+id/navigation_search"
+        android:icon="@drawable/baseline_search_24"
+        android:title="@string/menu_title_bottom_nav_search"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/navigation_profile"

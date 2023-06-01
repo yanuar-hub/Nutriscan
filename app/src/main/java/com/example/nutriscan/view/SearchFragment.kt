@@ -11,13 +11,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.example.nutriscan.R
-import com.example.nutriscan.databinding.FragmentProfileBinding
-import com.example.nutriscan.viewmodel.ProfileViewModel
+import com.example.nutriscan.databinding.FragmentSearchBinding
+import com.example.nutriscan.viewmodel.SearchViewModel
 
-class ProfileFragment : Fragment() {
+class SearchFragment : Fragment() {
 
-    private lateinit var viewModel: ProfileViewModel
-    private lateinit var binding:FragmentProfileBinding
+    private lateinit var viewModel: SearchViewModel
+    private lateinit var binding: FragmentSearchBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,8 +29,8 @@ class ProfileFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        binding = FragmentProfileBinding.inflate(inflater, container, false)
-        viewModel = ViewModelProvider(this).get(ProfileViewModel::class.java)
+        binding = FragmentSearchBinding.inflate(inflater, container, false)
+        viewModel = ViewModelProvider(this).get(SearchViewModel::class.java)
         /*Implement options menu to fragments*/
         (activity as MainActivity).setSupportActionBar(binding.toolbar)
 
@@ -57,5 +57,4 @@ class ProfileFragment : Fragment() {
     private fun showMsg(message: String){
         Toast.makeText(requireContext(),message, Toast.LENGTH_SHORT).show()
     }
-
 }
