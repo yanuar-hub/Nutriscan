@@ -1,29 +1,18 @@
 package com.example.nutriscan.view
 
 import android.Manifest
-import android.content.Intent
 import android.content.pm.PackageManager
-import android.graphics.BitmapFactory
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.MediaStore
-import android.util.Size
 import android.widget.Toast
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.camera.core.CameraSelector
-import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.ImageCapture
 import androidx.camera.core.Preview
 import androidx.camera.core.R
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import androidx.core.content.FileProvider
 import com.example.nutriscan.databinding.ActivityCameraBinding
-import com.example.nutriscan.utils.createCustomTempFile
 import java.io.File
-import java.lang.StringBuilder
 
 class CameraActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCameraBinding
