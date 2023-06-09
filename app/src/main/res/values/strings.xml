@@ -26,5 +26,6 @@
     <string name="take_a_photo">take a photo</string>
     <string name="frame_camera">Frame Camera</string>
     <string name="back_button">Back Button</string>
+    <string name="framecenter">framecenter</string>
 
 </resources>

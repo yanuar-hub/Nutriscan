@@ -46,13 +46,14 @@
         android:contentDescription="@string/back_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/backbutton" />
+        android:src="@drawable/backbutton" />
 
     <ImageView
         android:id="@+id/rectframe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/framecam"
+        android:contentDescription="@string/framecenter"
         app:layout_constraintEnd_toEndOf="@+id/framecam"
         app:layout_constraintStart_toStartOf="@+id/framecam"
         app:layout_constraintTop_toTopOf="@+id/framecam"
