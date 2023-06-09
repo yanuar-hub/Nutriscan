@@ -15,11 +15,11 @@
         android:contentDescription="@string/take_a_photo"
         android:src="@drawable/icuserscan"
         android:tintMode="@color/white"
-        app:fabCustomSize="81dp"
+        app:fabCustomSize="72dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:maxImageSize="54dp" />
+        app:maxImageSize="34dp" />
 
     <androidx.camera.view.PreviewView
         android:id="@+id/viewFinder"

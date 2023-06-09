@@ -61,6 +61,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+
     fun isPermissionGranted(context: Context, permission: String) =
         ContextCompat.checkSelfPermission(
             context,
