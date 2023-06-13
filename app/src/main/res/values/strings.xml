@@ -44,5 +44,9 @@
     <string name="btn_edit">Edit Profile</string>
     <string name="background_profile">bg circle profile</string>
     <string name="profile_pict">avatar profile</string>
+    <string name="scan_result">Scan Result</string>
+    <string name="xx_calories">xx Calories</string>
+    <string name="nama_konsumsi">Nama Konsumsi</string>
+    <string name="get_started">Get Started</string>
 
 </resources>

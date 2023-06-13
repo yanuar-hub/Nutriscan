@@ -32,6 +32,20 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager2"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="328dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/outfit_regular"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:text="@string/get_started"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 </androidx.constraintlayout.widget.ConstraintLayout>
