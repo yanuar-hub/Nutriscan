@@ -7,6 +7,16 @@
     android:layout_height="match_parent"
     tools:context=".view.HomeFragment">
 
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="220sp"
+        android:background="@drawable/bg_softpink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/background_home"/>
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         style="@style/toolbar"
@@ -19,6 +29,174 @@
         app:titleTextColor="@color/white"
         tools:menu="@menu/activity_main_toolbar" />
 
+    <TextView
+        android:id="@+id/topText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28sp"
+        android:textSize="20sp"
+        android:textColor="@color/grey2"
+        android:fontFamily="@font/outfit_semibold"
+        android:text="@string/greeting2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/topText1"
+        />
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="24sp"
+        android:layout_marginEnd="24sp"
+        app:cardCornerRadius="8sp"
+        app:cardElevation="8sp"
+        app:layout_constraintBottom_toBottomOf="@+id/background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/background">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/titleProtein"
+                android:layout_width="80sp"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:fontFamily="@font/outfit_semibold"
+                android:layout_marginStart="15sp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="68sp"
+                android:textColor="@color/green"
+                android:text="@string/title_protein"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/iconProtein"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/icon_protein"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="39sp"
+                android:layout_marginBottom="36sp"
+                android:contentDescription="@string/icon_cabbage"
+                />
+
+            <TextView
+                android:id="@+id/protein"
+                android:layout_width="80sp"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:fontFamily="@font/outfit_semibold"
+                android:layout_marginStart="15sp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="8sp"
+                android:textColor="@color/green"
+                android:text="@string/protein_with_unit"
+                tools:text="42 grams"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/titleCalorie"
+                android:layout_width="80sp"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:fontFamily="@font/outfit_semibold"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="140sp"
+                android:layout_marginBottom="68sp"
+                android:textColor="@color/orange"
+                android:text="@string/title_calorie"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/iconCalorie"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:src="@drawable/icon_calorie"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="164sp"
+                android:layout_marginBottom="36sp"
+                android:contentDescription="@string/icon_corn"
+                />
+
+            <TextView
+                android:id="@+id/calorie"
+                android:layout_width="80sp"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:fontFamily="@font/outfit_semibold"
+                android:layout_marginStart="140sp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="8sp"
+                android:textColor="@color/orange"
+                android:text="@string/calorie_with_unit"
+                tools:text="94 kcal"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/titleSugar"
+                android:layout_width="80sp"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:fontFamily="@font/outfit_semibold"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="260sp"
+                android:layout_marginBottom="68sp"
+                android:textColor="@color/red"
+                android:text="@string/title_sugar"
+                android:textSize="18sp"
+                />
+
+            <ImageView
+                android:id="@+id/iconSugar"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:src="@drawable/icon_sugar"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="284sp"
+                android:layout_marginBottom="36sp"
+                android:contentDescription="@string/icon_apple"
+                />
+
+            <TextView
+                android:id="@+id/sugar"
+                android:layout_width="80sp"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:fontFamily="@font/outfit_semibold"
+                android:layout_marginStart="260sp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="8sp"
+                android:textColor="@color/red"
+                android:text="@string/sugar_with_unit"
+                tools:text="6 grams"
+                android:textSize="18sp"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="366sp"
+        android:layout_height="100sp"
+        android:layout_marginTop="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView1"
+        app:cardBackgroundColor="@color/soft_pink"
+        app:cardCornerRadius="8sp">
+
+        <ImageView
+            android:id="@+id/imgBanner1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/banner1"
+            android:contentDescription="@string/banner1"
+            />
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
