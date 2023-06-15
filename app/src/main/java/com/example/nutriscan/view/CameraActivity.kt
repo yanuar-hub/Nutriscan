@@ -69,16 +69,16 @@ class CameraActivity : AppCompatActivity() {
 
     private fun showRecyclerList() {
         rvScan.layoutManager = LinearLayoutManager(this)
-        val listLaptopAdapter = ScanResultAdapter(list)
-        rvScan.adapter = listLaptopAdapter
+        val listFoodAdapter = ScanResultAdapter(list)
+        rvScan.adapter = listFoodAdapter
 
-        listLaptopAdapter.setOnItemClickCallback(object : ScanResultAdapter.OnItemClickCallback {
+        listFoodAdapter.setOnItemClickCallback(object : ScanResultAdapter.OnItemClickCallback {
             override fun onItemClicked(data: Objek) {
                 showSelectedObjek(data)
             }
         })
 
-        listLaptopAdapter.setOnItemClickCallback(object : ScanResultAdapter.OnItemClickCallback {
+        listFoodAdapter.setOnItemClickCallback(object : ScanResultAdapter.OnItemClickCallback {
             override fun onItemClicked(data: Objek) {
                 val intentToJournal = Intent(this@CameraActivity, JournalFragment::class.java)
                 intentToJournal.putExtra("DATA", data)
