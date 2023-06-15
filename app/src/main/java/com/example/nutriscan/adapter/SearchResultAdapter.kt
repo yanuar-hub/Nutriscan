@@ -1,40 +1,58 @@
 package com.example.nutriscan.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.nutriscan.R
-import com.example.nutriscan.model.FoodListResponse
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.CircleCrop
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import com.example.nutriscan.databinding.ItemRowScanBinding
+import com.example.nutriscan.model.Food
 
-class SearchResultAdapter(val food : ArrayList<FoodListResponse.Food>)
-    : RecyclerView.Adapter<SearchResultAdapter.ViewHolder>() {
+class SearchResultAdapter : RecyclerView.Adapter<SearchResultAdapter.UserViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) : ViewHolder {
-        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_row_scan, parent, false)
-        return ViewHolder(view)
+    private val list = ArrayList<Food>()
+    private var onItemClickCallback: OnItemClickCallback?=null
+
+    fun setOnItemClickCallback (onItemClickCallback: OnItemClickCallback){
+        this.onItemClickCallback = onItemClickCallback
     }
 
-    override fun getItemCount(): Int = food.size
-
-
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val food = food[position]
-        holder.tvKalori.text=food.callories.toString()
-        holder.tvDeskripsi.text=food.name
-    }
-
-    class ViewHolder(view:View):RecyclerView.ViewHolder(view) {
-        val imgPhoto : ImageView = view.findViewById(R.id.iv_scan_result)
-        val tvKalori: TextView = view.findViewById(R.id.tv_jumlah_kalori)
-        val tvDeskripsi: TextView = view.findViewById(R.id.tv_nama_object)
-    }
-
-    fun setData(data:ArrayList<FoodListResponse.Food>){
-        food.clear()
-        food.addAll(data)
+    fun setList(foods : ArrayList<Food>){
+        list.clear()
+        list.addAll(foods)
         notifyDataSetChanged()
+    }
+
+    inner class UserViewHolder(val binding: ItemRowScanBinding) : RecyclerView.ViewHolder(binding.root){
+        fun bind(food: Food){
+            binding.root.setOnClickListener{
+                onItemClickCallback?.onItemClicked(food)
+            }
+            binding.apply {
+                Glide.with(itemView)
+                    .load(food.photo)
+                    .transition(DrawableTransitionOptions.withCrossFade())
+                    .transform(CircleCrop())
+                    .into(ivScanResult)
+                tvJumlahKalori.text = food.callories.toString()
+                tvNamaObject.text=food.name
+            }
+        }
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
+        val view = ItemRowScanBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+        return UserViewHolder((view))
+    }
+
+    override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
+        holder.bind(list[position])
+    }
+
+    override fun getItemCount(): Int = list.size
+
+    interface OnItemClickCallback{
+        fun onItemClicked(data: Food)
     }
 }

@@ -27,7 +27,7 @@ class AuthActivity : AppCompatActivity() {
         }
     }
 
-    fun moveToMainActivity() {
+    fun routeToMainActivity() {
         startActivity(Intent(this@AuthActivity, MainActivity::class.java))
     }
 

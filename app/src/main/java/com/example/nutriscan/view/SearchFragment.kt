@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.nutriscan.R
 import com.example.nutriscan.adapter.SearchResultAdapter
 import com.example.nutriscan.databinding.FragmentSearchBinding
-import com.example.nutriscan.model.FoodListResponse
+import com.example.nutriscan.model.Food
 import com.example.nutriscan.viewmodel.SearchViewModel
 
 class SearchFragment : Fragment() {
@@ -34,20 +34,33 @@ class SearchFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View? {
         binding = FragmentSearchBinding.inflate(inflater, container, false)
-        viewModel = ViewModelProvider(this).get(SearchViewModel::class.java)
         /*Implement options menu to fragments*/
         (activity as MainActivity).setSupportActionBar(binding.toolbar)
 
         showLoading(true)
+        searchAdapter = SearchResultAdapter()
+        searchAdapter.notifyDataSetChanged()
+        searchAdapter.setOnItemClickCallback(object : SearchResultAdapter.OnItemClickCallback {
+            override fun onItemClicked(food: Food) {
+                showMsg("Fitur detail nutrisi belum tersedia")
+            }
+        })
         viewModel = ViewModelProvider(this,ViewModelProvider.NewInstanceFactory()).get(SearchViewModel::class.java)
+        binding.apply {
+            rvItemSearch.layoutManager = LinearLayoutManager(context)
+            rvItemSearch.setHasFixedSize(true)
+            rvItemSearch.adapter=searchAdapter
+        }
+        viewModel.getFood().observe(viewLifecycleOwner){
+            if (it!=null){
+                searchAdapter.setList(it)
+                showLoading(false)
+            }
+        }
 
         return binding.root
     }
 
-    private fun showData(data:FoodListResponse){
-        val food = data.data
-        searchAdapter.setData(food)
-    }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.activity_main_toolbar, menu)

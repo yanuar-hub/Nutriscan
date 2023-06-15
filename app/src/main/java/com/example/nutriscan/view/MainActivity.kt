@@ -95,5 +95,5 @@ class MainActivity : AppCompatActivity() {
     private fun showMsg(message: String){
         Toast.makeText(applicationContext,message, Toast.LENGTH_SHORT).show()
     }
-
+    fun routeToAuth() = startActivity(Intent(this, AuthActivity::class.java))
 }

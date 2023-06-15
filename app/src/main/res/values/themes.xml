@@ -21,11 +21,11 @@
         <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
     </style>
 
-    <style name="BottomSheetStyle" parent="Base.Theme.Nutriscan">
+    <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
         <item name="android:background">@color/transparant</item>
     </style>
 
-    <style name="BottomsSheetDialogTheme" parent="Base.Theme.Nutriscan">
+    <style name="BottomsSheetDialogTheme" parent="Theme.Design.Light">
         <item name="bottomSheetStyle">
             @style/BottomSheetStyle
         </item>

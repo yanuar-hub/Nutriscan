@@ -19,17 +19,32 @@ data class RegisterResponse (
     val message: String
 )
 
-data class FoodListResponse (val data:ArrayList<Food>){
-    data class Food(
-    val id: String,
-    val name: String,
-    val photo: String,
-    val portion: Int,
-    val unit: String,
-    val callories: Int,
-    val category: String
-    )
-}
+data class FoodListResponse(
+    @SerializedName("data")
+    var data:ArrayList<Food> = arrayListOf(),
+    @SerializedName("count")
+    var count: Int?= null,
+    @SerializedName("totalPages")
+    var totalPages: Int?= null,
+    @SerializedName("currentPage" )
+    var currentPage: Int?= null)
+
+data class Food(
+    @SerializedName("id")
+    var id: String? = null,
+    @SerializedName("name")
+    var name: String? = null,
+    @SerializedName("photo")
+    var photo: String? = null,
+    @SerializedName("portion")
+    var portion: Int?= null,
+    @SerializedName("unit")
+    var unit: String? = null,
+    @SerializedName("callories")
+    var callories : Int?= null,
+    @SerializedName("category")
+    var category  : String? = null
+)
 
 data class FindFoodResponse (
     val food : ArrayList<FoodListResponse>

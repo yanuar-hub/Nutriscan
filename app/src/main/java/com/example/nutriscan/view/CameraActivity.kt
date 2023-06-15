@@ -140,8 +140,8 @@ class CameraActivity : AppCompatActivity() {
     }
 
     private fun showBottomSheet(){
+        dialog = BottomSheetDialog(this)
         val dialogView = layoutInflater.inflate(R.layout.bottom_sheet,null)
-        dialog = BottomSheetDialog(this,R.style.BottomsSheetDialogTheme)
         dialog.setContentView(dialogView)
         rvScan = dialogView.findViewById(R.id.rv_item_scan)
         showRecyclerList()
