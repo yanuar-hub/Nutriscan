@@ -50,25 +50,40 @@
     <string name="get_started">Get Started</string>
 
     <!--Home-->
-    <string name="greeting">Hi Name</string>
-    <string name="greeting2">It\'s Your Nutrition Journey</string>
-    <string name="title_protein">Protein</string>
-    <string name="protein_with_unit">%d %s</string>
-    <string name="title_calorie">Calorie</string>
-    <string name="calorie_with_unit">%d %s</string>
-    <string name="title_sugar">Sugar</string>
-    <string name="sugar_with_unit">%d %s</string>
     <string name="background_home">bg softPink home</string>
     <string name="icon_cabbage">icon protein</string>
     <string name="icon_corn">icon calorie</string>
     <string name="icon_apple">icon sugar</string>
     <string name="banner1">Home Banner One</string>
+    <string name="masukan_nama_makanan">Masukan nama makanan</string>
+    <string name="mencari_nama_makanan">Mencari nama makanan</string>
 
-    <!--Profile-->
-    <string name="user_name">Name</string>
-    <string name="your_email">Your Email</string>
-    <string name="btn_edit">Edit Profile</string>
-    <string name="background_profile">bg circle profile</string>
-    <string name="profile_pict">avatar profile</string>
+    <!--Object Name-->
+    <string-array name="data_name">
+        <item>Orange Juice</item>
+        <item>Lemonade</item>
+    </string-array>
 
+    <!--Object Name-->
+    <string-array name="data_calorie">
+        <item>45 Calorie</item>
+        <item>47 Calorie</item>
+    </string-array>
+
+    <!--Photo-->
+    <integer-array name="data_photo_detail">
+        <item>@drawable/orangejuice</item>
+        <item>@drawable/lemonade</item>
+    </integer-array>
+
+    <!--Login-->
+    <string name="background_circle">background for login</string>
+    <string name="title_log">Sign In</string>
+    <string name="description_log">Welcome To NutriScan. Lets Scan, track, manage, and achieve your nutrition goals with our user-friendly app.</string>
+    <string name="ti_email">Email</string>
+    <string name="ti_pass">Password</string>
+    <string name="button_sign_in">Sign In</string>
+    <string name="forgot_pass">Forgot Password?</string>
+    <string name="other_sign_in">or Sign In With</string>
+    <string name="btn_sign_with_google">Google</string>
 </resources>

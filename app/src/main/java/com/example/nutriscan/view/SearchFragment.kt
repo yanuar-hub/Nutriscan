@@ -10,14 +10,18 @@ import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.nutriscan.R
+import com.example.nutriscan.adapter.SearchResultAdapter
 import com.example.nutriscan.databinding.FragmentSearchBinding
+import com.example.nutriscan.model.FoodListResponse
 import com.example.nutriscan.viewmodel.SearchViewModel
 
 class SearchFragment : Fragment() {
 
     private lateinit var viewModel: SearchViewModel
     private lateinit var binding: FragmentSearchBinding
+    private lateinit var searchAdapter : SearchResultAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,7 +38,15 @@ class SearchFragment : Fragment() {
         /*Implement options menu to fragments*/
         (activity as MainActivity).setSupportActionBar(binding.toolbar)
 
+        showLoading(true)
+        viewModel = ViewModelProvider(this,ViewModelProvider.NewInstanceFactory()).get(SearchViewModel::class.java)
+
         return binding.root
+    }
+
+    private fun showData(data:FoodListResponse){
+        val food = data.data
+        searchAdapter.setData(food)
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
@@ -56,5 +68,13 @@ class SearchFragment : Fragment() {
 
     private fun showMsg(message: String){
         Toast.makeText(requireContext(),message, Toast.LENGTH_SHORT).show()
+    }
+
+    private fun showLoading(state:Boolean){
+        if (state){
+            binding.pbSearch.visibility = View.VISIBLE
+        }else{
+            binding.pbSearch.visibility = View.GONE
+        }
     }
 }

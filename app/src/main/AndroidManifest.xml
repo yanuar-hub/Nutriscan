@@ -21,9 +21,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_nutriscan"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_nutriscan_round"
         android:supportsRtl="true"
         android:theme="@style/Base.Theme.Nutriscan">
         <activity
@@ -58,5 +58,13 @@
                 android:resource="@xml/image_path" />
         </provider>
     </application>
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:scheme="https" />
+        </intent>
+    </queries>
 
 </manifest>

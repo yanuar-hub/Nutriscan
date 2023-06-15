@@ -35,7 +35,7 @@ class SplashScreenActivity : AppCompatActivity() {
         splashViewModel.getToken()
             .observe(this) { token ->
                 if (token == "No User Token") Timer().schedule(2000) {
-                    startActivity(Intent(this@SplashScreenActivity, MainActivity::class.java))
+                    startActivity(Intent(this@SplashScreenActivity, GetStartedActivity::class.java))
                     finish()
                 } else Timer().schedule(2000) {
                     startActivity(Intent(this@SplashScreenActivity, MainActivity::class.java))

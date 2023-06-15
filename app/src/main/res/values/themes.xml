@@ -20,4 +20,14 @@
         <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
         <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
     </style>
+
+    <style name="BottomSheetStyle" parent="Base.Theme.Nutriscan">
+        <item name="android:background">@color/transparant</item>
+    </style>
+
+    <style name="BottomsSheetDialogTheme" parent="Base.Theme.Nutriscan">
+        <item name="bottomSheetStyle">
+            @style/BottomSheetStyle
+        </item>
+    </style>
 </resources>

@@ -15,6 +15,10 @@ class LoginFragment : Fragment() {
     private lateinit var viewModel: LoginViewModel
     private lateinit var binding: FragmentLoginBinding
 
+    companion object {
+        fun newInstance() = LoginFragment()
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
