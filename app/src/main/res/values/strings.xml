@@ -58,20 +58,20 @@
 
     <!--Object Name-->
     <string-array name="data_name">
-        <item>Orange Juice</item>
-        <item>Lemonade</item>
+        <item>Egg</item>
+        <item>Boiled eggs</item>
     </string-array>
 
     <!--Object Name-->
     <string-array name="data_calorie">
-        <item>45 Calorie</item>
-        <item>47 Calorie</item>
+        <item>70 Calorie</item>
+        <item>155 Calorie</item>
     </string-array>
 
     <!--Photo-->
     <integer-array name="data_photo_detail">
-        <item>@drawable/orangejuice</item>
-        <item>@drawable/lemonade</item>
+        <item>@drawable/telur</item>
+        <item>@drawable/telurrebus</item>
     </integer-array>
 
     <!--Login-->
